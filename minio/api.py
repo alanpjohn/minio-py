@@ -238,8 +238,8 @@ class Minio:
             headers["x-amz-content-sha256"] = sha256
         if creds and creds.session_token:
             headers["X-Amz-Security-Token"] = creds.session_token
-        date = time.utcnow()
-        headers["x-amz-date"] = time.to_amz_date(date)
+        # date = time.utcnow()
+        # headers["x-amz-date"] = time.to_amz_date(date)
         return headers, date
 
     def _url_open(
